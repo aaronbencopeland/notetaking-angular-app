@@ -1,5 +1,14 @@
 a {
     cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
+.condensed-menu-open-icon {
+    font-size: 34px;
+    width: 34px;
+    height: 34px;
+    cursor: pointer;
 }
 
 .logo-separator {
@@ -39,6 +48,24 @@ a {
     gap: 15px;
 }
 
+.navbar-menu-option {
+    width: min-content;
+    height: min-content;
+    text-align: center;
+}
+
+.navbar-menu-option:hover {
+    color: rgb(214, 214, 214);
+}
+
+.navbar-menu-options-container {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
 .navbar-search-container {
     height: 25%;
     width: 40%;
@@ -75,4 +102,22 @@ a {
     outline: none;
     font-size: 17px;
     background-color: rgb(244, 245, 248);
+}
+
+@media (max-width: 1023px) {
+    .navbar-search-container {
+        display: none;
+    }
+}
+
+@media (min-width: 800px) {
+    .navbar-menu-options-condensed-container {
+        display: none
+    }
+}
+
+@media (max-width: 800px) {
+    .navbar-menu-options-container {
+        display: none;
+    }
 }

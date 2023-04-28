@@ -23,5 +23,15 @@
         <input class="navbar-search-input" placeholder="Search Tutorials" />
     </div>
 
-    <div>This is where we'll start adding in the menu options</div>
+    <nav class="navbar-menu-options-container" *ngFor="let option of menuOptionData">
+        <a href="{{ option.link }}" class="navbar-menu-option">
+            {{ option.title }}
+        </a>
+    </nav>
+
+    <div class="navbar-menu-options-condensed-container">
+        <mat-icon fontIcon="menu" class="condensed-menu-open-icon"
+            aria-hidden="false" aria-label="search icon" 
+        />
+    </div>
 </div>
