@@ -42,15 +42,31 @@ a {
 .navbar-search-container {
     height: 25%;
     width: 40%;
-    padding: 0px 10px;
+    padding: 0px 0px 0px 15px;
     border-radius: 0.75rem;
-    background-color: white;
+    border: 1px solid rgb(45, 57, 64);;
+    background-color: rgb(244, 245, 248);
     display: flex;
     gap: 5px;
+    flex-direction: row-reverse;
 }
 
 .navbar-search-icon {
+    padding: 0rem .80rem;
+    height: 100%;
+    background-color: rgb(244, 245, 248);
     color: black;
+    border-left: 1px solid black;
+    border-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px 0.60rem 0.60rem 0px;
+}
+
+.navbar-search-icon:hover {
+    background-color: rgb(214, 214, 214);
+    cursor: pointer;
 }
 
 .navbar-search-input {
@@ -58,4 +74,5 @@ a {
     border: none;
     outline: none;
     font-size: 17px;
+    background-color: rgb(244, 245, 248);
 }
