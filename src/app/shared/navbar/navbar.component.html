@@ -20,7 +20,12 @@
             aria-hidden="false" aria-label="search icon" 
         />
 
-        <input class="navbar-search-input" placeholder="Search Tutorials" />
+        <input class="navbar-search-input"
+            placeholder="Search Tutorials"
+            type="text"
+            (ngModel)="searchInput"
+            (input)="onSearchChange($event)"
+        />
     </div>
 
     <nav class="navbar-menu-options-container" *ngFor="let option of menuOptionData">

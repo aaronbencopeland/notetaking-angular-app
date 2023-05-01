@@ -11,6 +11,8 @@ import { mediaQueryListener } from 'src/utils/MediaQueries';
 export class NavbarComponent {
     menuCollapsed = true;
     menuOptionData = NavbarOptions;
+    searchInput = "";
+    searchText = "";
 
     // Will set menuCollapsed to true if screen width eclipses 800px
     toggleMenuQueryListener = mediaQueryListener('(min-width: 800px)').subscribe((matches) => {
@@ -18,6 +20,23 @@ export class NavbarComponent {
             this.menuCollapsed = true;
         }
     });
+
+    onHandleSearchSubmit = (e: any) => {
+        e.preventDefault();
+
+        if(this.searchText) {
+            // Implement search logic here
+
+            this.searchText = "";
+        }
+    };
+
+    onSearchChange = (event: Event) => {
+        const input = event.target as HTMLInputElement;
+
+        this.searchText = input.value;
+        console.log(this.searchText)
+    }
     
     toggleMenuCollapse(): void {
         this.menuCollapsed = !this.menuCollapsed;
