@@ -26,6 +26,11 @@ a {
     flex-direction: column;
 }
 
+.navbar-collapsable-menu {
+    display: flex;
+    flex-direction: column;
+}
+
 .navbar-container {
     height: 100px;
     padding: 0px 25px;
@@ -109,6 +114,34 @@ a {
     outline: none;
     font-size: 17px;
     background-color: rgb(244, 245, 248);
+}
+
+.navbar-side-menu-list {
+    list-style-type: none;
+    text-align: center;
+}
+
+.navbar-side-menu-list-item {
+    margin: 20px;
+}
+
+.navbar-side-menu-options {
+    display: flex;
+    position: fixed;
+    top: 99px;
+    z-index: 30;
+    width: auto;
+    height: auto;
+    transition:0.4s ease;
+    background-color: rgb(45, 57, 64);
+}
+
+.navbar-side-menu-options-hidden {
+    right: -100%;
+}
+
+.navbar-side-menu-options-visible {
+    right: 0px;
 }
 
 @media (max-width: 1023px) {

@@ -29,17 +29,33 @@
         </a>
     </nav>
 
-    <div class="navbar-menu-options-icons">
-        <mat-icon fontIcon="menu" class=".condensed-menu-icon"
-            [ngClass]="menuCollapsed ? '' : 'display-hidden'"
-            (click)="toggleMenuCollapse()"
-            aria-hidden="false" aria-label="search icon"
-        />
+    <div class="navbar-collapsable-menu">
+        <div class="navbar-menu-options-icons">
+            <mat-icon fontIcon="menu" class=".condensed-menu-icon"
+                [ngClass]="menuCollapsed ? '' : 'display-hidden'"
+                (click)="toggleMenuCollapse()"
+                aria-hidden="false" aria-label="search icon"
+            />
+    
+            <mat-icon fontIcon="close" class=".condensed-menu-icon"
+                [ngClass]="menuCollapsed ? 'display-hidden' : ''"
+                (click)="toggleMenuCollapse()"
+                aria-hidden="false" aria-label="search icon"
+            />
+        </div>
 
-        <mat-icon fontIcon="close" class=".condensed-menu-icon"
-            [ngClass]="menuCollapsed ? 'display-hidden' : ''"
-            (click)="toggleMenuCollapse()"
-            aria-hidden="false" aria-label="search icon"
-        />
+        <div class="navbar-side-menu-options"
+            [ngClass]="menuCollapsed
+                ? 'navbar-side-menu-options-hidden'
+                : 'navbar-side-menu-options-visible'"
+        >
+            <ul class="navbar-side-menu-list">
+                <li class="navbar-side-menu-list-item" *ngFor="let option of menuOptionData">
+                    <a href="{{ option.link }}" class="navbar-menu-option">
+                        {{ option.title }}
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
