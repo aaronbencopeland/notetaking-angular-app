@@ -31,13 +31,13 @@
 
     <div class="navbar-menu-options-icons">
         <mat-icon fontIcon="menu" class=".condensed-menu-icon"
-            [ngClass]="menuCollapsed ? 'display-hidden' : ''"
+            [ngClass]="menuCollapsed ? '' : 'display-hidden'"
             (click)="toggleMenuCollapse()"
             aria-hidden="false" aria-label="search icon"
         />
 
         <mat-icon fontIcon="close" class=".condensed-menu-icon"
-            [ngClass]="menuCollapsed ? '' : 'display-hidden'"
+            [ngClass]="menuCollapsed ? 'display-hidden' : ''"
             (click)="toggleMenuCollapse()"
             aria-hidden="false" aria-label="search icon"
         />
