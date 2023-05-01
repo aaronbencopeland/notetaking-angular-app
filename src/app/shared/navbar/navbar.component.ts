@@ -8,5 +8,10 @@ import { NavbarOptions } from 'src/constants';
 })
 
 export class NavbarComponent {
+    menuCollapsed = false;
     menuOptionData = NavbarOptions;
+
+    toggleMenuCollapse(): void {
+        this.menuCollapsed = !this.menuCollapsed;
+    }
 }

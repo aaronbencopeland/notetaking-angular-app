@@ -29,9 +29,17 @@
         </a>
     </nav>
 
-    <div class="navbar-menu-options-condensed-container">
-        <mat-icon fontIcon="menu" class="condensed-menu-open-icon"
-            aria-hidden="false" aria-label="search icon" 
+    <div class="navbar-menu-options-icons">
+        <mat-icon fontIcon="menu" class=".condensed-menu-icon"
+            [ngClass]="menuCollapsed ? 'display-hidden' : ''"
+            (click)="toggleMenuCollapse()"
+            aria-hidden="false" aria-label="search icon"
+        />
+
+        <mat-icon fontIcon="close" class=".condensed-menu-icon"
+            [ngClass]="menuCollapsed ? '' : 'display-hidden'"
+            (click)="toggleMenuCollapse()"
+            aria-hidden="false" aria-label="search icon"
         />
     </div>
 </div>

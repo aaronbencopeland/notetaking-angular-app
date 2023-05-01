@@ -4,11 +4,14 @@ a {
     color: white;
 }
 
-.condensed-menu-open-icon {
+.condensed-menu-icon {
     font-size: 34px;
     width: 34px;
     height: 34px;
-    cursor: pointer;
+}
+
+.display-hidden {
+    display: none;
 }
 
 .logo-separator {
@@ -66,6 +69,10 @@ a {
     gap: 5px;
 }
 
+.navbar-menu-options-icons {
+    cursor: pointer;
+}
+
 .navbar-search-container {
     height: 25%;
     width: 40%;
@@ -111,7 +118,7 @@ a {
 }
 
 @media (min-width: 800px) {
-    .navbar-menu-options-condensed-container {
+    .navbar-menu-options-icons {
         display: none
     }
 }
