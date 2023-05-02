@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { NavbarOptions } from 'src/constants';
 import { mediaQueryListener } from 'src/utils/MediaQueries';
 
@@ -11,7 +11,6 @@ import { mediaQueryListener } from 'src/utils/MediaQueries';
 export class NavbarComponent {
     menuCollapsed = true;
     menuOptionData = NavbarOptions;
-    searchInput = "";
     searchText = "";
 
     // Will set menuCollapsed to true if screen width eclipses 800px
@@ -35,7 +34,6 @@ export class NavbarComponent {
         const input = event.target as HTMLInputElement;
 
         this.searchText = input.value;
-        console.log(this.searchText)
     }
     
     toggleMenuCollapse(): void {
