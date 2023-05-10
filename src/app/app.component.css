@@ -1,0 +1,19 @@
+.app-body {
+    display: flex;
+
+    position: fixed;
+    top: 100px;
+    z-index: 20;
+
+    height: 100%;
+    width:  100%;
+
+    padding: 30px 25px 0px 25px;
+
+    background-color: rgb(244, 245, 248);
+}
+
+.app-container {
+    height: 100%;
+    width: 100%;
+}

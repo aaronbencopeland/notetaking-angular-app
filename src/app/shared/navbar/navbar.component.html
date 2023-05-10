@@ -1,0 +1,68 @@
+<div class="navbar-container">
+    <a class="navbar-logo-container">
+        <mat-icon fontIcon="home"
+            class="navbar-logo"
+            aria-hidden="false" aria-label="Example home icon" 
+        />
+
+        <div class="logo-separator"></div>
+        
+        <div class="navbar-app-name">
+            <div>Knowledge</div>
+
+            <div>Transfer</div>
+
+            <div>Manager</div>
+        </div>
+    </a>
+
+    <div class="navbar-search-container">
+        <mat-icon fontIcon="search"
+            class="navbar-search-icon"
+            aria-hidden="false" aria-label="search icon" 
+        />
+
+        <input class="navbar-search-input"
+            placeholder="Search Tutorials"
+            type="text"
+            (ngModel)="searchText"
+            (input)="onSearchChange($event)"
+        />
+    </div>
+
+    <nav class="navbar-menu-options-container" *ngFor="let option of menuOptionData">
+        <a href="{{ option.link }}" class="navbar-menu-option">
+            {{ option.title }}
+        </a>
+    </nav>
+
+    <div class="navbar-collapsable-menu">
+        <div class="navbar-menu-options-icons">
+            <mat-icon fontIcon="menu" class=".condensed-menu-icon"
+                [ngClass]="menuCollapsed ? '' : 'display-hidden'"
+                (click)="toggleMenuCollapse()"
+                aria-hidden="false" aria-label="search icon"
+            />
+    
+            <mat-icon fontIcon="close" class=".condensed-menu-icon"
+                [ngClass]="menuCollapsed ? 'display-hidden' : ''"
+                (click)="toggleMenuCollapse()"
+                aria-hidden="false" aria-label="search icon"
+            />
+        </div>
+
+        <div class="navbar-side-menu-options"
+            [ngClass]="menuCollapsed
+                ? 'navbar-side-menu-options-hidden'
+                : 'navbar-side-menu-options-visible'"
+        >
+            <ul class="navbar-side-menu-list">
+                <li class="navbar-side-menu-list-item" *ngFor="let option of menuOptionData">
+                    <a href="{{ option.link }}" class="navbar-menu-option">
+                        {{ option.title }}
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
