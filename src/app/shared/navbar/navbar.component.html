@@ -1,8 +1,8 @@
 <div class="navbar-container">
     <a class="navbar-logo-container">
-        <mat-icon fontIcon="home"
+        <img src="../../../assets/images/home_white_fill.svg"
             class="navbar-logo"
-            aria-hidden="false" aria-label="Example home icon" 
+            aria-hidden="false" aria-label="home icon"
         />
 
         <div class="logo-separator"></div>
@@ -17,7 +17,8 @@
     </a>
 
     <div class="navbar-search-container">
-        <mat-icon fontIcon="search"
+        <img fontIcon="search"
+            src="../../../assets/images/search_white_fill.svg"
             class="navbar-search-icon"
             aria-hidden="false" aria-label="search icon" 
         />
@@ -38,16 +39,18 @@
 
     <div class="navbar-collapsable-menu">
         <div class="navbar-menu-options-icons">
-            <mat-icon fontIcon="menu" class=".condensed-menu-icon"
+            <img class=".condensed-menu-icon"
+                src="../../../assets/images/menu_white_fill.svg"
                 [ngClass]="menuCollapsed ? '' : 'display-hidden'"
                 (click)="toggleMenuCollapse()"
-                aria-hidden="false" aria-label="search icon"
+                aria-hidden="false" aria-label="open menu icon"
             />
     
-            <mat-icon fontIcon="close" class=".condensed-menu-icon"
+            <img class=".condensed-menu-icon"
+                src="../../../assets/images/close_white_fill.svg"
                 [ngClass]="menuCollapsed ? 'display-hidden' : ''"
                 (click)="toggleMenuCollapse()"
-                aria-hidden="false" aria-label="search icon"
+                aria-hidden="false" aria-label="close menu icon"
             />
         </div>
 
